@@ -1,4 +1,4 @@
-# Changelog v1.1
+# Changelog v1.1.1
 
-## Changes
-- Made the mod work on client side only
+## Fixes
+- Firework rockets won't get used when in off-hand
