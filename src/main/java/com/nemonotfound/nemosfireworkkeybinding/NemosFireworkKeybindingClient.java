@@ -65,7 +65,7 @@ public class NemosFireworkKeybindingClient implements ClientModInitializer {
             return;
         }
 
-        if (slot == 0 && player.getOffHandStack().isOf(Items.FIREWORK_ROCKET)) {
+        if (slot == 40 && player.getOffHandStack().isOf(Items.FIREWORK_ROCKET)) {
             interactionManager.interactItem(player, Hand.OFF_HAND);
 
             return;
