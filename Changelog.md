@@ -1,5 +1,9 @@
-# Changelog v1.1.1
+# Changelog v1.1.2
 
 ## Fixes
-- Firework rockets won't get used when in off-hand
-  - Instead, slot 5 will be thrown out
+- Shield equip sound plays when having shield in off-hand
+
+## Changes
+- Slot priority changed
+  - Firework rockets in main hand are used first
+  - Off-hand second
