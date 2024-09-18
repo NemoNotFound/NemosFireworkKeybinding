@@ -22,13 +22,13 @@ import static com.nemonotfound.nemosfireworkkeybinding.NemosFireworkKeybinding.M
 public class NemosFireworkKeybindingClient implements ClientModInitializer {
 
     private static KeyBinding fireworkRocketKeyBinding;
-    private static  final int LAST_HOTBAR_SLOT_INDEX = 8;
+    private static final int LAST_HOTBAR_SLOT_INDEX = 8;
     private static final int PLAYER_INVENTORY_SLOT_COUNT_WITHOUT_EQUIPMENT_AND_CRAFTING_SLOTS = 36;
 
     @Override
     public void onInitializeClient() {
         fireworkRocketKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key." + MOD_ID + ".firework",
+                "key." + MOD_ID + ".firework",
                 InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN,
                 "category." + MOD_ID + ".nemos-firework-keybinding"));
 
@@ -65,17 +65,22 @@ public class NemosFireworkKeybindingClient implements ClientModInitializer {
             return;
         }
 
-        if (slot == 40 && player.getOffHandStack().isOf(Items.FIREWORK_ROCKET)) {
+        if (player.getMainHandStack().isOf(Items.FIREWORK_ROCKET)) {
+            interactionManager.interactItem(player, Hand.MAIN_HAND);
+        } else if (player.getOffHandStack().isOf(Items.FIREWORK_ROCKET)) {
             interactionManager.interactItem(player, Hand.OFF_HAND);
-
-            return;
+        } else {
+            swapAndUseFireworkRocket(slot, player, interactionManager);
         }
+    }
 
+    private void swapAndUseFireworkRocket(int slot, ClientPlayerEntity player, ClientPlayerInteractionManager interactionManager) {
         slot = getSlotIndex(slot);
+        int selectedSlot = getSlotIndex(player.getInventory().selectedSlot);
 
-        swapFireworkRocket(interactionManager, slot, player);
-        interactionManager.interactItem(player, Hand.OFF_HAND);
-        swapFireworkRocket(interactionManager, slot, player);
+        swapFireworkRocket(interactionManager, slot, selectedSlot, player);
+        interactionManager.interactItem(player, Hand.MAIN_HAND);
+        swapFireworkRocket(interactionManager, slot, selectedSlot, player);
     }
 
     private int getSlotIndex(int slot) {
@@ -86,9 +91,9 @@ public class NemosFireworkKeybindingClient implements ClientModInitializer {
         return slot;
     }
 
-    private void swapFireworkRocket(ClientPlayerInteractionManager interactionManager, int slot, ClientPlayerEntity player) {
+    private void swapFireworkRocket(ClientPlayerInteractionManager interactionManager, int slot, int selectedSlot, ClientPlayerEntity player) {
         interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
-        interactionManager.clickSlot(0, 45, 0, SlotActionType.SWAP, player);
+        interactionManager.clickSlot(0, selectedSlot, 0, SlotActionType.SWAP, player);
         interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
     }
 }
