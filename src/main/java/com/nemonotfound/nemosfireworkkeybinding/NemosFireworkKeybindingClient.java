@@ -92,8 +92,15 @@ public class NemosFireworkKeybindingClient implements ClientModInitializer {
     }
 
     private void swapFireworkRocket(ClientPlayerInteractionManager interactionManager, int slot, int selectedSlot, ClientPlayerEntity player) {
-        interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
-        interactionManager.clickSlot(0, selectedSlot, 0, SlotActionType.SWAP, player);
-        interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
+        if (selectedSlot == PLAYER_INVENTORY_SLOT_COUNT_WITHOUT_EQUIPMENT_AND_CRAFTING_SLOTS) {
+            //No idea why, but when the selected slot is the first slot, the swapping won't work the other way around
+            interactionManager.clickSlot(0, selectedSlot, 0, SlotActionType.SWAP, player);
+            interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
+            interactionManager.clickSlot(0, selectedSlot, 0, SlotActionType.SWAP, player);
+        } else {
+            interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
+            interactionManager.clickSlot(0, selectedSlot, 0, SlotActionType.SWAP, player);
+            interactionManager.clickSlot(0, slot, 0, SlotActionType.SWAP, player);
+        }
     }
 }
