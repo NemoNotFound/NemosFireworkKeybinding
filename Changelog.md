@@ -1,4 +1,9 @@
-# Changelog v1.1.3
+# Changelog v1.1.2
+
+## Fixes
+- Shield equip sound plays when having shield in off-hand
 
 ## Changes
-- Updated icon
+- Slot priority changed
+  - Firework rockets in main hand are used first
+  - Off-hand second
