@@ -1,4 +1,4 @@
-package com.nemonotfound.nemosfireworkkeybinding;
+package com.nemonotfound.nemos.firework.keybinding;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;

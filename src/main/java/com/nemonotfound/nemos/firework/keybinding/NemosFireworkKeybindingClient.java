@@ -1,4 +1,4 @@
-package com.nemonotfound.nemosfireworkkeybinding;
+package com.nemonotfound.nemos.firework.keybinding;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -17,7 +17,7 @@ import org.lwjgl.glfw.GLFW;
 
 import java.util.Objects;
 
-import static com.nemonotfound.nemosfireworkkeybinding.NemosFireworkKeybinding.MOD_ID;
+import static com.nemonotfound.nemos.firework.keybinding.NemosFireworkKeybinding.MOD_ID;
 
 public class NemosFireworkKeybindingClient implements ClientModInitializer {
 
@@ -76,7 +76,7 @@ public class NemosFireworkKeybindingClient implements ClientModInitializer {
 
     private void swapAndUseFireworkRocket(int slot, ClientPlayerEntity player, ClientPlayerInteractionManager interactionManager) {
         slot = getSlotIndex(slot);
-        int selectedSlot = getSlotIndex(player.getInventory().selectedSlot);
+        int selectedSlot = getSlotIndex(player.getInventory().getSelectedSlot());
 
         swapFireworkRocket(interactionManager, slot, selectedSlot, player);
         interactionManager.interactItem(player, Hand.MAIN_HAND);

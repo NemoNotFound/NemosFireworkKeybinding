@@ -16,16 +16,16 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.nemonotfound.nemosfireworkkeybinding.NemosFireworkKeybinding"
+			"com.nemonotfound.nemos.firework.keybinding.NemosFireworkKeybinding"
 		],
 		"client": [
-			"com.nemonotfound.nemosfireworkkeybinding.NemosFireworkKeybindingClient"
+			"com.nemonotfound.nemos.firework.keybinding.NemosFireworkKeybindingClient"
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.16.9",
+		"fabricloader": ">=0.16.10",
 		"minecraft": [
-			"~1.21.4"
+			">=1.21.5"
 		],
 		"java": ">=21",
 		"fabric-api": "*",
