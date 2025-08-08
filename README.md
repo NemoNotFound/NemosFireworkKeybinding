@@ -8,9 +8,9 @@ It was originally created at the request of the community, and I hope you enjoy 
 For detailed information, check out the [wiki](https://wiki.devnemo.com/projects/minecraft-mods/nemos-firework-keybinding/general).
 
 ### Disclaimer
-This mod is client-side only and may give you an advantage over other players.
-I cannot guarantee that you won’t be banned when using it on public servers.
-Use it on public servers at your own risk, or check with a server admin beforehand.
+This is a **client-only mod**, which means it can give you an advantage over other players.  
+Using it on public servers _may_ get you banned depending on the server’s rules.  
+Use at your own risk — or check with the server admins beforehand.
 
 ## Downloads
 - [CurseForge](https://curseforge.com/minecraft/mc-mods/nemos-firework-keybinding)
