@@ -16,16 +16,12 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.devnemo.nemos.examplemod.FabricExampleMod"
+          "com.devnemo.nemos.firework.keybinding.FabricFireworkKeybinding"
         ],
-        "fabric-datagen": [
-            "com.devnemo.nemos.examplemod.DataGenerator"
+        "client": [
+            "com.devnemo.nemos.firework.keybinding.FabricFireworkKeybindingClient"
         ]
     },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",

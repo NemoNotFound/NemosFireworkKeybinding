@@ -1,14 +1,20 @@
-![Mod](https://github.com/NemoNotFound/NemoNotFound/blob/master/resources/minecraft_projects/titles/png/nemos_.png?raw=true)
+![Nemo's Firework Keybinding](https://github.com/NemoNotFound/NemoNotFound/blob/master/resources/minecraft_projects/titles/png/nemos_firework_keybinding.png?raw=true)
 <br><br>
 
 ## Description
-...
+As the name suggests, this mod adds a keybinding for using fireworks while flying!       
+It was originally created at the request of the community, and I hope you enjoy it!
 
-For detailed information, check out the [wiki](https://wiki.devnemo.com/projects/minecraft-mods/nemos-/general).
+For detailed information, check out the [wiki](https://wiki.devnemo.com/projects/minecraft-mods/nemos-firework-keybinding/general).
+
+### Disclaimer
+This mod is client-side only and may give you an advantage over other players.
+I cannot guarantee that you won’t be banned when using it on public servers.
+Use it on public servers at your own risk, or check with a server admin beforehand.
 
 ## Downloads
-- [CurseForge](https://curseforge.com/minecraft/mc-mods/nemos-)
-- [Modrinth](https://modrinth.com/mod/nemos-)
+- [CurseForge](https://curseforge.com/minecraft/mc-mods/nemos-firework-keybinding)
+- [Modrinth](https://modrinth.com/mod/nemos-firework-keybinding)
 <br><br>
 
 ## Third-Party Components
@@ -21,10 +27,10 @@ For detailed information, check out the [wiki](https://wiki.devnemo.com/projects
 
 ## Support Me
 I love to create mods for Minecraft and wish to live off it one day, so I hope you like what I do. <br>
-Either way feel free to give me your feedback and suggestions, either on my Discord or the [discussions](https://github.com/NemoNotFound/Nemos/discussions/) :)
+Either way feel free to give me your feedback and suggestions, either on my Discord or the [discussions](https://github.com/NemoNotFound/NemosFireworkKeybinding/discussions/) :)
 <br><br>
 
-[![ko-fi donation](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nemonotfound)
+[![ko-fi donation](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.devnemo.com)
 <br><br>
 
 ## Get a Minecraft Server
